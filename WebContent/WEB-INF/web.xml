@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<display-name>Atlas</display-name>
+	<servlet>
+		<description>Atlas Web Service</description>
+		<display-name>Atlas Web Service</display-name>
+		<servlet-name>Atlas Servlet</servlet-name>
+		<servlet-class>com.ibm.websphere.jaxrs.server.IBMRestServlet</servlet-class>
+		<init-param>
+			<param-name>javax.ws.rs.Application</param-name>
+			<param-value>com.ibm.atlas.webservice.AtlasWebServiceApplication</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+		<enabled>true</enabled>
+		<async-supported>false</async-supported>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Atlas Servlet</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Atlas Web Service REST API</web-resource-name>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>izuUsers</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<security-role>
+		<description>Security role for all z/OSMF users</description>
+		<role-name>izuUsers</role-name>
+	</security-role>
+
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>z/OSMF Authorized User Credentials</realm-name>
+	</login-config>
+
+	<env-entry>
+		<env-entry-name>com.ibm.websphere.security.SyncToOSThread</env-entry-name>
+		<env-entry-type>java.lang.Boolean</env-entry-type>
+		<env-entry-value>true</env-entry-value>
+	</env-entry>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<persistence-context-ref>
+		<persistence-context-ref-name>AtlasDB/em</persistence-context-ref-name>
+		<persistence-unit-name>AtlasDBPersistenceUnit</persistence-unit-name>
+	</persistence-context-ref>
+	
+</web-app>

@@ -1,0 +1,7 @@
+{"items":[
+{"name":".", "mode":"drwxr-xr-x", "size":8192, "uid":282, "user":"STEVENH", "gid":5, "group":"TSOUSER", "mtime":"2017-11-16T17:20:12"},
+{"name":"..", "mode":"drwxrwxrwx", "size":8192, "uid":282, "user":"STEVENH", "gid":5, "group":"TSOUSER", "mtime":"2017-11-16T17:20:10"},
+{"name":"dir1", "mode":"dr-xr-xr-x", "size":8192, "uid":282, "user":"STEVENH", "gid":5, "group":"TSOUSER", "mtime":"2017-11-16T17:20:11"},
+{"name":"dir2", "mode":"drwxr-x---", "size":8192, "uid":282, "user":"STEVENH", "gid":5, "group":"TSOUSER", "mtime":"2017-11-16T17:20:11"},
+{"name":"file", "mode":"drwxr-xr--", "size":8192, "uid":282, "user":"STEVENH", "gid":5, "group":"TSOUSER", "mtime":"2017-11-16T17:20:12"}
+],"returnedRows":5,"totalRows":5,"JSONversion":1}

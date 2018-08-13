@@ -1,0 +1,7 @@
+//ATLJ0001 JOB (ADL),'ATLAS',MSGCLASS=X,CLASS=A,TIME=1440               JOB14215
+//*        THIS JOB ABENDS AND GENERATES AN FA FAULT ENTRY                 
+//STEPLIB  DD DSN=ATLAS.TEST.LOAD,DISP=SHR                                      
+//IDIOPTS  DD DISP=SHR,DSN=ATLAS.TEST.FAOPTS(IDIOPTS1)                          
+//SYSPRINT DD SYSOUT=*                                                          
+//SYSOUT   DD SYSOUT=*                                                          
+//*                                                                             

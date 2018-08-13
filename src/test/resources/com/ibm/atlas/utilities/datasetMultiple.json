@@ -1,0 +1,14 @@
+[
+ 	{
+ 		"type":"TestENTYPE1",
+ 		"dsn":"TestENTNAME1"
+ 	},
+ 	{
+ 		"type":"TestENTYPE2",
+ 		"dsn":"TestENTNAME2"
+ 	},
+ 	{
+ 		"type":"TestENTYPE3",
+ 		"dsn":"TestENTNAME3"
+ 	}
+ ]

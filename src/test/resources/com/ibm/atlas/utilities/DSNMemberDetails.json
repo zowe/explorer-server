@@ -1,0 +1,7 @@
+[
+ 	{
+ 		"recfm":"test",
+ 		"blksize":1024,
+ 		"lrecl":1
+ 	}
+ ]

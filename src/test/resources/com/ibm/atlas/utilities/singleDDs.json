@@ -1,0 +1,8 @@
+[
+		{
+			"dd":1, 
+			"name":"STEPLIB",
+			"dsns":["ATLAS.TEST.LOAD"],
+			"content":"DSN=ATLAS.TEST.LOAD,DISP=SHR"
+		}
+]

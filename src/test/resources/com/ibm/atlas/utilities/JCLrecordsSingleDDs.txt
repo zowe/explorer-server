@@ -1,0 +1,5 @@
+//ATLJ0001 JOB (ADL),'ATLAS',MSGCLASS=X,CLASS=A,TIME=1440               JOB14215
+//*        THIS JOB ABENDS AND GENERATES AN FA FAULT ENTRY                      
+//UNIT     EXEC PGM=TSTP0001                                                
+//STEPLIB  DD DSN=ATLAS.TEST.LOAD,DISP=SHR                                                                                                
+//*                                                                             
