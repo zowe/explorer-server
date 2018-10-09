@@ -65,25 +65,25 @@ public class Datasets {
 	 *            Dataset name filter, e.g. HLQ.**, **.SUFFIX, etc
 	 * @return List of dataset names that match the given filter.
 	 */
-	@GET
-	@Path(value = "{filter}")
-	@Produces(MediaType.APPLICATION_JSON)
-	@ApiOperation(value = "Get a list of data sets by filter", 
-	  notes = "This API returns a list of data sets according to a given filter.")
-	@ApiResponses({@ApiResponse(code = 200, message = "Ok", response = String.class, responseContainer = "List")})
-	public List<String> getDSNs(
-			@ApiParam(value = "Dataset filter string, e.g. HLQ.\\*\\*, \\*\\*.SUF, etc.", required = true) @PathParam("filter") String filter) {
+	// @GET
+	// @Path(value = "{filter}")
+	// @Produces(MediaType.APPLICATION_JSON)
+	// @ApiOperation(value = "Get a list of data sets by filter", 
+	//   notes = "This API returns a list of data sets according to a given filter.")
+	// @ApiResponses({@ApiResponse(code = 200, message = "Ok", response = String.class, responseContainer = "List")})
+	// public List<String> getDSNs(
+	// 		@ApiParam(value = "Dataset filter string, e.g. HLQ.\\*\\*, \\*\\*.SUF, etc.", required = true) @PathParam("filter") String filter) {
 
-		JSONObject datasets = zosmfService.listDatasets(filter);
+	// 	JSONObject datasets = zosmfService.listDatasets(filter);
 
-		List<String> datasetNames = new LinkedList<>();
-		JSONArray dsnList = (JSONArray) datasets.get("items"); //$NON-NLS-1$
-		for (int i = 0; i < dsnList.size(); i++) {
-			JSONObject entry = (JSONObject) dsnList.get(i);
-			datasetNames.add((String) entry.get("dsname")); //$NON-NLS-1$
-		}
+	// 	List<String> datasetNames = new LinkedList<>();
+	// 	JSONArray dsnList = (JSONArray) datasets.get("items"); //$NON-NLS-1$
+	// 	for (int i = 0; i < dsnList.size(); i++) {
+	// 		JSONObject entry = (JSONObject) dsnList.get(i);
+	// 		datasetNames.add((String) entry.get("dsname")); //$NON-NLS-1$
+	// 	}
 
-		return datasetNames;
+	// 	return datasetNames;
 	}
 
 	/**
