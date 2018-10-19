@@ -56,7 +56,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @Path(value = "/jobs")
-@Api(value = "Atlas : JES Jobs APIs")
+@Api(value = "Zowe : JES Jobs APIs")
 public class Jobs {
 
 	private static final String JOB_NOT_FOUND = Messages.getString("Jobs.JESNameNotFound"); //$NON-NLS-1$

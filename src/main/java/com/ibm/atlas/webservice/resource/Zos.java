@@ -38,7 +38,7 @@ import io.swagger.annotations.ApiResponses;
 
 @Path(value = "/zos")
 
-@Api(value = "Atlas : z/OS System APIs")
+@Api(value = "Zowe : z/OS System APIs")
 public class Zos {
 	
 	@Context
