@@ -30,7 +30,7 @@ import io.swagger.annotations.ApiResponses;
 
 @Path(value = "/system")
 
-@Api(value = "Atlas : System APIs")
+@Api(value = "Zowe : System APIs")
 public class System {
 	
 	@Context

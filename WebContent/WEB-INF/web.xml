@@ -19,7 +19,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>Atlas Servlet</servlet-name>
-		<url-pattern>/api/*</url-pattern>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 	
 	<security-constraint>

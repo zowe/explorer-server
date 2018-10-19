@@ -46,7 +46,7 @@ import io.swagger.annotations.ApiResponses;
 
 @Path(value = "/datasets")
 
-@Api(value = "Atlas : Dataset APIs")
+@Api(value = "Zowe : Dataset APIs")
 public class Datasets {
 
 	@Context

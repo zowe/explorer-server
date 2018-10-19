@@ -43,7 +43,7 @@ import io.swagger.annotations.ApiResponses;
 
 @Path(value = "/uss/files")
 
-@Api(value = "Atlas : USS Files APIs")
+@Api(value = "Zowe : USS Files APIs")
 public class Files {
 
 	@Inject
