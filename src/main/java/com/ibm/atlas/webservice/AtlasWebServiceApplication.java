@@ -13,7 +13,7 @@ package com.ibm.atlas.webservice;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("api")
+@ApplicationPath("")
 public class AtlasWebServiceApplication extends Application {
 	// Intentionally left blank, discover classes automatically
 }
