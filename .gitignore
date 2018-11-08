@@ -3,3 +3,6 @@
 .jazzignore
 src/AtlasSources_frameworksCLI_wafl.log
 .history
+
+# Sonar ignores
+.scannerwork/
