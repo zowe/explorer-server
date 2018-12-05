@@ -64,7 +64,10 @@ public abstract class ZosmfService {
 		for (int i = 0; i < queryParamPairs.length; i += 2) {
 			webTarget = webTarget.queryParam(queryParamPairs[i], queryParamPairs[i+1]);
 		}
-		return webTarget.request(MediaType.APPLICATION_JSON).header("X-CSRF-ZOSMF-HEADER", "");
+		return webTarget
+			.request(MediaType.APPLICATION_JSON)
+			.header("X-CSRF-ZOSMF-HEADER", "")
+			.header("X-IBM-Response-Timeout", "600");
 	}
 	
 	protected WebApplicationException createJSONParseException(IOException exception) {
