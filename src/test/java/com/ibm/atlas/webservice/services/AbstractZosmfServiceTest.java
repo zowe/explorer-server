@@ -83,6 +83,7 @@ public class AbstractZosmfServiceTest <T extends ZosmfService> extends AtlasTest
 		}
 		when(webTarget.request(MediaType.APPLICATION_JSON)).thenReturn(builder);
 		when(builder.header("X-CSRF-ZOSMF-HEADER","")).thenReturn(builder);
+		when(builder.header("X-IBM-Response-Timeout","600")).thenReturn(builder);
 		return builder;
 	}
 }
